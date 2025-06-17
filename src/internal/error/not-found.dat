@@ -1,0 +1,8 @@
+title=見つかりません
+author=System
+description=お探しのページが見つかりません
+robots=n
+
+<content>
+ <p>申し訳ありません。お探しのページは見つかりません。<br>記事が削除された可能性があります。</p>
+</content>

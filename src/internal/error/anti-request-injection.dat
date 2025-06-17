@@ -1,0 +1,9 @@
+title=利用できません
+author=System
+description=要求はブロックされました
+robots=n
+
+<content>
+ <p>リクエストされた要求は拒否されました。</p>
+ <li>記事のURLに「..」は含まれていませんか?</li>
+</content>

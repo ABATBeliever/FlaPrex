@@ -1,0 +1,14 @@
+title=Release Note
+author=System
+description=FlaPrex のリリースノートとバージョン情報
+robots=n
+day=2025/06/16
+update=2025/06/17
+
+<content>
+ <h2>Insider Preview - Release 1</h2>
+ <p>2025/06/17</p>
+ <p>このバージョンは、初めてのリリースです。</p>
+ <li>システム構造が決定されました</li>
+ <li>記事を表示できるようになりました</li>
+</content>
