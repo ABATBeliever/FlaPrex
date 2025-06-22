@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <meta name="author"      content="{{author}}">
+  <meta name="keywords"    content="{{keyword}}">
+  {{robots}}
+
+  <meta property="og:site_name"   content="{{websiteName}}">
+  <meta property="og:title"       content="{{title}}">
+  <meta property="og:type"        content="article">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image"       content="{{websiteRoot}}/src/media/ogp/{{ogpimg}}">
+
+  <link rel="icon" type="image/x-icon"              href="{{websiteRoot}}/src/media/favicon/favicon.ico">
+  <link rel="icon" type="image/png"                 href="{{websiteRoot}}/src/media/favicon/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="16x16"   href="{{websiteRoot}}/src/media/favicon/favicon-016.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="{{websiteRoot}}/src/media/favicon/favicon-032.png">
+  <link rel="apple-touch-icon"      sizes="180x180" href="{{websiteRoot}}/src/media/favicon/favicon-180.png">
+  <link rel="apple-touch-icon"      sizes="512x512" href="{{websiteRoot}}/src/media/favicon/favicon-512.png">
+  <link rel="shortcut icon"                         href="{{websiteRoot}}/src/media/favicon/favicon.ico">
+
+  <link rel="stylesheet" href="/src/media/css/kiso.css">
+  <link rel="stylesheet" href="/src/media/css/article.css">
+</head>
+
+<body>
+<header>
+  <h1><a href="/">{{websiteName}}</a></h1>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav id="nav">
+    <a href="#">ホーム</a>
+    <a href="#">最新記事</a>
+    <a href="#">人気記事</a>
+    <a href="#">お問い合わせ</a>
+  </nav>
+  <div class="search-box">
+    <input type="text" placeholder="サイト内検索...">
+    <button>検索</button>
+  </div>
+</header>
+
+<div class="container">
+  <aside class="left">
+    <h2>最新ニュース</h2>
+    <ul>
+      <li><a href="#">ニュース記事タイトル1</a></li>
+      <li><a href="#">ニュース記事タイトル2</a></li>
+      <li><a href="#">ニュース記事タイトル3</a></li>
+      <li><a href="#">ニュース記事タイトル4</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <h2>{{title}}</h2>
+    <p>著者: {{author}}<br>公開: {{day}} / 最終更新: {{update}}</p>
+    <br>
+
+{{content}}
+
+  </main>
+
+  <aside class="right">
+    <h2>カテゴリ検索</h2>
+    <button>カテゴリ1</button>
+    <button>カテゴリ2</button>
+    <button>カテゴリ3</button>
+    <button>カテゴリ4</button>
+  </aside>
+</div>
+
+<div style="text-align: center">
+  <footer>
+    <small>
+      {{websiteFooter}}
+    </small>
+  </footer>
+</div>
+
+<script type="text/javascript" src="{{websiteRoot}}/src/media/js/hamburger.js"></script>
+
+</body>
+</html>

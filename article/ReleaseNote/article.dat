@@ -3,9 +3,22 @@ author=System
 description=FlaPrex のリリースノートとバージョン情報
 robots=n
 day=2025/06/16
-update=2025/06/17
+update=2025/06/22
+keyword=既定,FlaPrex,リリースノート
+ogpimg=back.png
 
 <content>
+ <h2>Insider Preview - Release 2</h2>
+ <p>2025/06/22</p>
+ <p>このバージョンでは、サイトとしての基本的構造を制作しました。</p>
+ <li>OGP画像を選択されるようになりました</li>
+ <li>ファビコンを選択できるようになりました</li>
+ <li>サイトのUIとその構造が作成されました</li>
+ <li>.htaccessのルーティング問題が解決されました</li>
+ <li>検索機能実装に向け、リストの生成phpを追加しました。</li>
+
+ <br>
+
  <h2>Insider Preview - Release 1</h2>
  <p>2025/06/17</p>
  <p>このバージョンは、初めてのリリースです。</p>

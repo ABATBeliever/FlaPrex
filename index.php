@@ -1,5 +1,5 @@
 <?php
-// ===================================================================
+// ======================================================================
 //
 //  ████████  ████                ██████▒                                
 //  ████████  ████                ███████▒                               
@@ -14,19 +14,24 @@
 //  ██          █████   ████████  ██         ██       ░███████   ██▒▒██  
 //  ██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ 
 //
-//  Insider Preview - Release 1
+//  Insider Preview - Release 2               [Apache 2.0]
 //  Made by ABATBeliever
 //
-//  https://github.com/ABATBeliever/FlaPrex'
+//  https://github.com/ABATBeliever/FlaPrex
 //
-// ===================================================================
+// ======================================================================
+$websiteName    = '<サイト名>';
+$websiteFooter  = 'Copyright © 2025 FlaPrex. All Rights Reserved.';
+$websiteRoot    = 'https://atenet.cloudfree.jp';
+$skinName       = 'press.skin';
+// ======================================================================
  
 $requestUri = $_SERVER['REQUEST_URI'];
 $segments = explode('/', trim($requestUri, '/'));
 $articleId = isset($segments[1]) ? $segments[1] : null;
 
 $articlePath   = __DIR__ . "/article/{$articleId}/article.dat";
-$structurePath = __DIR__ . "/article/structure.dat";
+$structurePath = __DIR__ . "/src/internal/skin/" . $skinName;
 
 if (!$articleId) {
     readfile(__DIR__ . '/src/internal/default.html');
@@ -56,6 +61,8 @@ $author      = $meta['author']      ?? '匿名';
 $description = $meta['description'] ?? '';
 $day         = $meta['day']         ?? '1900-01-01';
 $update      = $meta['update']      ?? $day;
+$keyword     = $meta['keyword']     ?? 'タグ無し';
+$ogpimg      = $meta['ogpimg']     ?? 'index.png';
 $robots      = (isset($meta['robots']) && strtolower($meta['robots']) === 'n') ? 
     '<meta name="robots" content="noindex, nofollow">' : 
     '<meta name="robots" content="index, follow">';
@@ -69,8 +76,8 @@ if (preg_match('/<content>(.*?)<\/content>/s', $articleRaw, $contentMatch)) {
 $template = file_get_contents($structurePath);
 
 $output = str_replace(
-    ['{{title}}', '{{author}}', '{{description}}', '{{robots}}', '{{day}}', '{{update}}', '{{content}}'],
-    [$title, $author, $description, $robots, $day, $update, $content],
+    ['{{title}}', '{{author}}', '{{description}}', '{{robots}}', '{{day}}', '{{update}}', '{{content}}', '{{websiteName}}', '{{websiteFooter}}', '{{websiteRoot}}', '{{keyword}}', '{{ogpimg}}'],
+    [$title, $author, $description, $robots, $day, $update, $content, $websiteName, $websiteFooter, $websiteRoot, $keyword, $ogpimg],
     $template
 );
 

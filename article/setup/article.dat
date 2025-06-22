@@ -1,31 +1,40 @@
 title=Setup Guide
 author=System
-description=FlaPlexのインストール
+description=FraPlexのインストール
 robots=y
 day=2025/06/16
-update=2025/06/17
+update=2025/06/22
+keyword=既定,install
 
 <content>
  <h4>FlaPrex を選んでくださり、ありがとうございます！</h4>
  <p>FlaPrex は、PHP言語で制作されたCMSソフトウェアです。</p>
  <p>前身の Pera CMS とは異なり、HTMLで記事を作成したり、記事を検索したり、システムを簡単に制御したりできます。</p>
+ <br>
 
  <h3>0: システムのコンポーネントを確認する</h3>
  <p>準備中</p>
+ <br>
 
  <h3>1: システムを設定する</h3>
- <li>"./article/structure.dat"を編集することで、外観をカスタマイズすることが可能です。<br>※CSSやJavascript等は"./src/media/"のフォルダの中に配置することを推奨しています。<br>※記事データの入る変数にご注意ください。</li>
- <li>"./src/media/ogp/primary.png" を変更し、SNSにリンクを張ったときのサムネイルを設定します。</li>
+ <li>"./src/internal/skin/*.skin"を編集または追加し、index.phpで指定することで、外観をカスタマイズすることが可能です。<br>※CSSやJavascript等は"./src/media/"のフォルダの中に配置することを推奨しています。<br>※記事データの入る変数にご注意ください。</li>
+ <li>"./src/media/ogp/index.png" を変更し、SNSにリンクを張ったときの既定のサムネイルを設定します。</li>
  <li>"./src/media/img/favicon/*.ico" を変更し、ファビコンを変更します。ファイル名は解像度を表します。</li>
  <li>デフォルトのページはFlaPlexシステムで生成されず、"./src/internal/default.html"が使用されます。</li>
+ <br>
 
  <h3>2: 初めての記事を作成する</h3>
- <p>記事を作成するには、 "./article/" フォルダに記事データを配置します。</p>
+ <p>記事を作成するには、 "./article/" フォルダに記事データを配置し、インデックスを更新します。</p>
  <p>① - ./article/ に記事URL(今回の場合 "setup")になるフォルダを作成します。</p>
  <p>② - "article.dat" を作成し、編集します。書式はこの記事を参考にしてください。</p>
- <p>※本文は ＜content＞で囲まれている必要があります。</p>
+ <p>　　 ※本文は ＜content＞で囲まれている必要があります。</p>
+ <p>③ - ssh接続で"./src/internal/tools/list-upd.php"を実行し、インデックスを更新します。</p>
+ <p>　　 ※これを行わないと、将来追加される検索機能で記事が出てきません。</p>
+ <p>　　 ※非推奨ですが、2～5行目を削除することで、ブラウザ上からでも実行できます。</p>
+ <br>
 
  <h3>3: この記事を削除する</h3>
  <p>記事を書く準備を整えたら、このセットアップ記事を削除しましょう。<br>"./article/setup/"フォルダを削除するか、"article.dat"ファイルをリネームしましょう。</p>
  <p>同様の手段で、「ReleaseNote」記事も消すことをお勧めします。</p>
+ <br>
 </content>
