@@ -42,8 +42,10 @@
     <a href="#">お問い合わせ</a>
   </nav>
   <div class="search-box">
-    <input type="text" placeholder="サイト内検索...">
-    <button>検索</button>
+    <form method="get" action="/search/">
+      <input type="text" name="word" placeholder="検索語...">
+      <button type="submit">検索</button>
+    </form>
   </div>
 </header>
 

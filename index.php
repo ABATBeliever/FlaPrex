@@ -14,7 +14,7 @@
 //  ██          █████   ████████  ██         ██       ░███████   ██▒▒██  
 //  ██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ 
 //
-//  Insider Preview - Release 2               [Apache 2.0]
+//  Insider Preview - Release 3                      [Apache 2.0 License]
 //  Made by ABATBeliever
 //
 //  https://github.com/ABATBeliever/FlaPrex
@@ -22,7 +22,7 @@
 // ======================================================================
 $websiteName    = '<サイト名>';
 $websiteFooter  = 'Copyright © 2025 FlaPrex. All Rights Reserved.';
-$websiteRoot    = 'https://atenet.cloudfree.jp';
+$websiteRoot    = '';
 $skinName       = 'press.skin';
 // ======================================================================
  
@@ -39,7 +39,7 @@ if (!$articleId) {
 }
 
 if (!file_exists($structurePath))       {
-    echo './article/structure.dat が見つかりません。サイト管理者にご連絡ください。' ;
+    echo '指定されたスキンファイルが見つかりません。サイト管理者にご一報ください。' ;
     exit;
 }
 

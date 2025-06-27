@@ -1,13 +1,29 @@
 title=Release Note
 author=System
-description=FlaPrex のリリースノートとバージョン情報
-robots=n
+description=FlaPrex のバージョン情報とリリースノート
+robots=y
 day=2025/06/16
-update=2025/06/22
-keyword=既定,FlaPrex,リリースノート
+update=2025/06/27
+keyword=既定,FlaPrex,バージョン,version,リリースノート
 ogpimg=back.png
 
 <content>
+ <h1>バージョン情報</h1>
+ <p>This version: <strong>Insider Preview - Release 3</strong></p>
+ <p>このバージョンはStable Releaseではないため、互換性が保証されません。</p>
+ <br>
+
+ <h1>リリースノート</h1>
+ <h2>Insider Preview - Release 3</h2>
+ <p>2025/06/27</p>
+ <p>このバージョンでは、検索機能を実装しました。</p>
+ <li>検索機能が追加されました</li>
+ <li>サイトのUIから検索できるようになりました</li>
+ <li>インストールドキュメントを追加しました</li>
+ <li>トラブルシューティングを追加しました</li>
+ <li>システムファイルのチェックを行うツールが同封されます</li>
+ <br>
+
  <h2>Insider Preview - Release 2</h2>
  <p>2025/06/22</p>
  <p>このバージョンでは、サイトとしての基本的構造を制作しました。</p>
@@ -15,7 +31,7 @@ ogpimg=back.png
  <li>ファビコンを選択できるようになりました</li>
  <li>サイトのUIとその構造が作成されました</li>
  <li>.htaccessのルーティング問題が解決されました</li>
- <li>検索機能実装に向け、リストの生成phpを追加しました。</li>
+ <li>検索機能実装に向け、リストの生成phpを追加しました</li>
 
  <br>
 

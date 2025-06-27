@@ -1,0 +1,35 @@
+title=トラブルシューティング
+author=System
+description=FlaPrex でトラブルがあったときにご覧ください
+robots=y
+day=2025/06/27
+update=2025/06/27
+keyword=既定,FlaPrex,トラブル,トラブルシューティング
+
+<content>
+ <h2>ファビコンやOGP画像が反映されない</h2>
+ <li>"./index.php"にて、FlaPrexのインストールされたURLは入力されていますか?</li>
+ <li>"./index.php"にて、FlaPrexのインストールされたURLの末尾に/がついていませんか?</li>
+ <br>
+
+ <h2>以下の表示が出る: 指定されたスキンファイルが見つかりません。サイト管理者にご一報ください。</h2>
+ <li>"./index.php"にて、$skinNameは設定されていますか?</li>
+ <li>"./src/internal/skin/に 設定された名前のスキンファイルがありますか?</li>
+ <br>
+
+ <h2>以下の表示が出る: [記事は空です]</h2>
+ <li>記事のarticle.datの本文は＜content＞で囲まれていますか?</li>
+ <br>
+
+ <h2>以下の表示が出る: 検索キャッシュがありません。サイト管理者にご一報ください。</h2>
+ <li>"./article/search-list.json"はありますか?ない場合は<br>"./src/internal/tools/file-chk.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
+ <br>
+
+ <h2>削除したはずの記事が検索すると出てくる / 投稿したはずの記事が、robots=yと設定しているのに検索で出てこない</h2>
+ <li>"./src/internal/tools/file-chk.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
+ <br>
+
+ <h2>以下の表示が出る: リクエストされた要求は拒否されました。</h2>
+ <li>記事のURL(./article/*/)のフォルダの名前に「..」は含まれている場合はそれを改名してください。</li>
+ <br>
+</content>
