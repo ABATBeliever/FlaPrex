@@ -23,23 +23,21 @@
   <link rel="apple-touch-icon"      sizes="512x512" href="{{websiteRoot}}/src/media/favicon/favicon-512.png">
   <link rel="shortcut icon"                         href="{{websiteRoot}}/src/media/favicon/favicon.ico">
 
-  <link rel="stylesheet" href="/src/media/css/kiso.css">
   <link rel="stylesheet" href="/src/media/css/article.css">
 </head>
 
 <body>
 <header>
-  <h1><a href="/">{{websiteName}}</a></h1>
+  <h1><a href="/" style="color: white;">{{websiteName}}</a></h1>
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
   <nav id="nav">
-    <a href="#">ホーム</a>
-    <a href="#">最新記事</a>
-    <a href="#">人気記事</a>
-    <a href="#">お問い合わせ</a>
+    <a href="#random-news-list">おすすめの記事</a>
+    <a href="#latest-news-list">最新の記事</a>
+    <a href="#category-list">カテゴリから探す</a>
   </nav>
   <div class="search-box">
     <form method="get" action="/search/">
@@ -51,13 +49,27 @@
 
 <div class="container">
   <aside class="left">
-    <h2>最新ニュース</h2>
-    <ul>
-      <li><a href="#">ニュース記事タイトル1</a></li>
-      <li><a href="#">ニュース記事タイトル2</a></li>
-      <li><a href="#">ニュース記事タイトル3</a></li>
-      <li><a href="#">ニュース記事タイトル4</a></li>
-    </ul>
+    <h2>おすすめの記事</h2>
+      <ul id="random-news-list"></ul>
+      <script>
+      fetch("/src/internal/api/recommend.php?cnt=7")
+        .then(res => res.json())
+        .then(data => {
+          const ul = document.getElementById("random-news-list");
+          data.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `<button><a href="/article/${item.id}/" style="color: white;">${item.title}</a> <small>${item.day}</small></button>`;
+            ul.appendChild(li);
+          });
+        })
+        .catch(err => {
+            const ul = document.getElementById("random-news-list");
+            const li = document.createElement("li");
+            li.style.color = "red";
+            li.textContent = "取得失敗 recommendAPIが不正です"
+            ul.appendChild(li);
+        });
+      </script>
   </aside>
 
   <main>
@@ -70,11 +82,50 @@
   </main>
 
   <aside class="right">
-    <h2>カテゴリ検索</h2>
-    <button>カテゴリ1</button>
-    <button>カテゴリ2</button>
-    <button>カテゴリ3</button>
-    <button>カテゴリ4</button>
+    <h2>最新の記事</h2>
+      <ul id="latest-news-list"></ul>
+      <script>
+      fetch("/src/internal/api/new.php?cnt=7")
+        .then(res => res.json())
+        .then(data => {
+          const ul = document.getElementById("latest-news-list");
+          data.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `<button><a href="/article/${item.id}/" style="color: white;">${item.title}</a> <small>${item.update}</small></button>`;
+            ul.appendChild(li);
+          });
+        })
+        .catch(err => {
+            const ul = document.getElementById("latest-news-list");
+            const li = document.createElement("li");
+            li.style.color = "red";
+            li.textContent = "取得失敗 newAPIが不正です"
+            ul.appendChild(li);
+        });
+      </script>
+    <h2>カテゴリから探す</h2>
+      <ul id="category-list"></ul>
+      <script>
+      fetch("/src/internal/api/list-category.php")
+        .then(res => res.json())
+        .then(data => {
+          const ul = document.getElementById("category-list");
+          const tags = Object.keys(data);
+          tags.forEach(tag => {
+            const count = data[tag];
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="/search/index.php?tag=${encodeURIComponent(tag)}">${tag}</a> <small>(${count})</small>`;
+            ul.appendChild(li);
+          });
+        })
+        .catch(err => {
+            const ul = document.getElementById("category-list");
+            const li = document.createElement("li");
+            li.style.color = "red";
+            li.textContent = "取得失敗 list-categoryAPIが不正です"
+            ul.appendChild(li);
+        });
+      </script>
   </aside>
 </div>
 

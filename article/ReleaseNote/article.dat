@@ -2,18 +2,31 @@ title=Release Note
 author=System
 description=FlaPrex のバージョン情報とリリースノート
 robots=y
-day=2025/06/16
+day=2025/06/18
 update=2025/06/27
 keyword=既定,FlaPrex,バージョン,version,リリースノート
-ogpimg=back.png
 
 <content>
  <h1>バージョン情報</h1>
- <p>This version: <strong>Insider Preview - Release 3</strong></p>
- <p>このバージョンはStable Releaseではないため、互換性が保証されません。</p>
+ <p>This version: <strong>Version 1.0.0</strong></p>
+ <p>このバージョンは正式リリースであり、1.x番台と互換性が保証されます</p>
  <br>
 
  <h1>リリースノート</h1>
+ <h2>Version 1.0.0</h2>
+ <p>2025/06/28</p>
+ <p>初の正式版です。</p>
+ <li>デフォルトページも生成に含まれるようになりました</li>
+ <li>ページはいくつかのAPIを実行し、Javascriptで左右の部分が生成されます</li>
+ <li>newAPIで最新記事を指定件数取得できます</li>
+ <li>oldAPIで古い記事を指定件数取得できます</li>
+ <li>recommendAPIでランダムに記事を指定件数取得できます</li>
+ <li>dir-tagAPIでタグに合う記事を指定件数取得できます</li>
+ <li>dir-authorAPIで特定の著者の記事を指定件数取得できます</li>
+ <li>dir-dateAPIで特定の日時範囲に(更新/投稿)された記事を取得できます</li>
+ <li>list-categoryAPIで、すべてのタグと件数を取得できます</li>
+ <br>
+
  <h2>Insider Preview - Release 3</h2>
  <p>2025/06/27</p>
  <p>このバージョンでは、検索機能を実装しました。</p>

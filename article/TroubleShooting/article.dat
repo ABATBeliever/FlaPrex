@@ -2,11 +2,29 @@ title=トラブルシューティング
 author=System
 description=FlaPrex でトラブルがあったときにご覧ください
 robots=y
-day=2025/06/27
-update=2025/06/27
+day=2025/06/28
+update=2025/06/28
 keyword=既定,FlaPrex,トラブル,トラブルシューティング
 
 <content>
+ <h2>個別の対応の前に</h2>
+ <li>"./src/internal/tools/file-chk.php"を実行し、ファイルが存在するか確認してください</li>
+ <li>"./src/internal/tools/list-upd.php"を実行し、検索キャッシュを作成してみてください。この処理は記事に手を加えるたびに実行される必要があります。</li>
+ <br>
+
+ <h2>解決しなかった場合</h2>
+ <p>再インストールを実行してください。</p>
+ <p>① - 該当するディレクトリ・ファイルをダウンロードします</p>
+ <li>./article/</li>
+ <li>./src/media/</li>
+ <li>./src/download/(中身がある場合)</li>
+ <li>./src/internal/default.dat(改造している場合)</li>
+ <li>./src/internal/skin/(改造している場合)</li>
+ <p>② - FlaPrexのディレクトリをすべて削除します</p>
+ <p>③ - 同じバージョンのFlaPrexをアップロードする</p>
+ <p>④ - バックアップしたディレクトリ・ファイルをアップロードします</p>
+ <br>
+
  <h2>ファビコンやOGP画像が反映されない</h2>
  <li>"./index.php"にて、FlaPrexのインストールされたURLは入力されていますか?</li>
  <li>"./index.php"にて、FlaPrexのインストールされたURLの末尾に/がついていませんか?</li>
@@ -22,14 +40,24 @@ keyword=既定,FlaPrex,トラブル,トラブルシューティング
  <br>
 
  <h2>以下の表示が出る: 検索キャッシュがありません。サイト管理者にご一報ください。</h2>
- <li>"./article/search-list.json"はありますか?ない場合は<br>"./src/internal/tools/file-chk.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
+ <li>"./article/search-list.json"はありますか?ない場合は<br>"./src/internal/tools/list-upd.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
  <br>
 
  <h2>削除したはずの記事が検索すると出てくる / 投稿したはずの記事が、robots=yと設定しているのに検索で出てこない</h2>
- <li>"./src/internal/tools/file-chk.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
+ <li>"./src/internal/tools/list-upd.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
  <br>
 
  <h2>以下の表示が出る: リクエストされた要求は拒否されました。</h2>
  <li>記事のURL(./article/*/)のフォルダの名前に「..」は含まれている場合はそれを改名してください。</li>
+ <br>
+
+ <h2>以下の表示が出る: 取得失敗 ○○APIが不正です</h2>
+ <li>ブラウザはJavascriptの実行を許可してください。</li>
+ <li>./src/internal/api/に該当のapiが存在するか確認してください。</li>
+ <li>"./src/internal/tools/list-upd.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
+ <br>
+
+ <h2>以下の表示が出る: error (search-list.json not found)</h2>
+ <li>"./src/internal/tools/list-upd.php"を実行し、記事の検索キャッシュを作成して再度お試しください。</li>
  <br>
 </content>

@@ -14,7 +14,7 @@
 //  ██          █████   ████████  ██         ██       ░███████   ██▒▒██  
 //  ██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ 
 //
-//  Insider Preview - Release 3                      [Apache 2.0 License]
+//  Version 1.0.0                                    [Apache 2.0 License]
 //  Made by ABATBeliever
 //
 //  https://github.com/ABATBeliever/FlaPrex
@@ -34,8 +34,8 @@ $articlePath   = __DIR__ . "/article/{$articleId}/article.dat";
 $structurePath = __DIR__ . "/src/internal/skin/" . $skinName;
 
 if (!$articleId) {
-    readfile(__DIR__ . '/src/internal/default.html');
-    exit;
+    $articleId = 'default';
+    $articlePath   = __DIR__ . "/src/internal/default.dat";
 }
 
 if (!file_exists($structurePath))       {

@@ -1,0 +1,24 @@
+title=Home
+author=System
+description=FlaPrexは正常にインストールされました！
+robots=n
+day=2025/06/16
+update=2025/06/28
+keyword=既定
+
+<content>
+ <h3>FlaPrex を選んでくださり、ありがとうございます！</h3>
+ <p>FlaPrex は、PHP言語で制作されたCMSソフトウェアです。</p>
+ <p>前身の Pera CMS とは異なり、HTMLで記事を作成したり、記事を検索したり、システムを簡単に制御したりできます。</p>
+ <p>バージョンについては<a href="./article/ReleaseNote/">こちらをクリック</a></p>
+ <p>トラブルシューティングについては<a href="./article/TroubleShooting/">こちらをクリック</a></p>
+ <br>
+
+ <h3>セットアップはまだ完了していません！</h3>
+ <p><a href="./article/setup/">こちらをクリック</a>してセットアップを完了してください。</p>
+ <br>
+
+ <h3>ホームページ</h3>
+ <p>このページは、./src/internal/default.datによる特殊ページです。</p>
+ <br>
+</content>

@@ -17,7 +17,7 @@ echo "██          █████   ████████  ██        
 echo "██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ \n";
 echo "FlaPrex file checker\n";
 echo "このファイルチェッカーは以下のバージョンのFlaPrex向けです: ";
-echo "Insider Preview - Release 3";
+echo "Version 1.0.0";
 echo "\n";
 
 $errorlevel = 0;
@@ -54,8 +54,8 @@ if (notfound("src/internal/skin/")) {
     echo "[NotFound] /src/internal/skin/ \n";
     $errorlevel++;
 }
-if (notfound("src/internal/default.html")) {
-    echo "[NotFound] /src/internal/default.html \n";
+if (notfound("src/internal/default.dat")) {
+    echo "[NotFound] /src/internal/default.dat \n";
     $errorlevel++;
 }
 if (notfound("src/internal/error/anti-request-injection.dat")) {
@@ -67,12 +67,37 @@ if (notfound("src/internal/error/not-found.dat")) {
     $errorlevel++;
 }
 
-if (notfound("src/media/ogp/index.png")) {
-    echo "[NotFound] /src/media/ogp/index.png \n";
+if (notfound("src/internal/api/list-category.php")) {
+    echo "[NotFound] /src/internal/api/list-category.php \n";
     $errorlevel++;
 }
-if (notfound("src/media/css/kiso.css")) {
-    echo "[NotFound] /src/media/css/kiso.css \n";
+if (notfound("src/internal/api/dir-date.php")) {
+    echo "[NotFound] /src/internal/api/dir-date.php \n";
+    $errorlevel++;
+}
+if (notfound("src/internal/api/dir-author.php")) {
+    echo "[NotFound] /src/internal/api/dir-author.php \n";
+    $errorlevel++;
+}
+if (notfound("src/internal/api/dir-tag.php")) {
+    echo "[NotFound] /src/internal/api/dir-tag.php \n";
+    $errorlevel++;
+}
+if (notfound("src/internal/api/old.php")) {
+    echo "[NotFound] /src/internal/api/old.php \n";
+    $errorlevel++;
+}
+if (notfound("src/internal/api/new.php")) {
+    echo "[NotFound] /src/internal/api/new.php \n";
+    $errorlevel++;
+}
+if (notfound("src/internal/api/recommend.php")) {
+    echo "[NotFound] /src/internal/api/recommend.php \n";
+    $errorlevel++;
+}
+
+if (notfound("src/media/ogp/index.png")) {
+    echo "[NotFound] /src/media/ogp/index.png \n";
     $errorlevel++;
 }
 if (notfound("src/media/css/article.css")) {

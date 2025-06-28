@@ -41,7 +41,7 @@ keyword=既定,install
 
  <h3>3: カスタマイズ</h3>
  <li>"./article/setup/"フォルダを削除し、この記事を削除する</li>
- <li>"./src/internal/default.html"を好きなものに変える</li>
+ <li>"./src/internal/default.dat"を、記事ファイルの書き方の作法に従い作成し、ホームページを変更する</li>
  <li>"./src/internal/skin/*.skin"(既定は"press.skin")を編集/独自作成し、外観をカスタマイズする。<br>※CSSやJavascript等は"./src/media/"のフォルダの中に配置することを推奨しています。<br>※記事データの入る変数にご注意ください。</li>
  <br>
 </content>
