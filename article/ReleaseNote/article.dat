@@ -3,16 +3,24 @@ author=System
 description=FlaPrex のバージョン情報とリリースノート
 robots=y
 day=2025/06/18
-update=2025/06/27
+update=2025/08/18
 keyword=既定,FlaPrex,バージョン,version,リリースノート
 
 <content>
  <h1>バージョン情報</h1>
- <p>This version: <strong>Version 1.0.0</strong></p>
+ <p>This version: <strong>Version 1.1.0</strong></p>
  <p>このバージョンは正式リリースであり、1.x番台と互換性が保証されます</p>
  <br>
 
  <h1>リリースノート</h1>
+ <h2>Version 1.1.0</h2>
+ <p>2025/08/18</p>
+ <p>バグ修正と細かい機能追加を行いました。</p>
+ <li>src/media/imgフォルダが存在しない問題を修正</li>
+ <li>'press.skin'において、スマホ版UIで検索ができない問題を修正</li>
+ <li>検索ページが存在しないcssを参照していた問題を修正</li>
+ <br>
+
  <h2>Version 1.0.0</h2>
  <p>2025/06/28</p>
  <p>初の正式版です。</p>

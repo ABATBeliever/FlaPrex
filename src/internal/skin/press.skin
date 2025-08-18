@@ -38,6 +38,7 @@
     <a href="#random-news-list">おすすめの記事</a>
     <a href="#latest-news-list">最新の記事</a>
     <a href="#category-list">カテゴリから探す</a>
+    <a href="/search/">検索</a>
   </nav>
   <div class="search-box">
     <form method="get" action="/search/">

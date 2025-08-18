@@ -14,7 +14,7 @@
 //  ██          █████   ████████  ██         ██       ░███████   ██▒▒██  
 //  ██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ 
 //
-//  Version 1.0.0                                    [Apache 2.0 License]
+//  Version 1.1.0                                    [Apache 2.0 License]
 //  Made by ABATBeliever
 //
 //  https://github.com/ABATBeliever/FlaPrex

@@ -16,7 +16,7 @@ echo "██          ██▒     ██▒  ███  ██         ██ 
 echo "██          █████   ████████  ██         ██       ░███████   ██▒▒██  \n";
 echo "██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ \n";
 echo "FlaPrex list updater\n";
-echo "v1.0\n";
+echo "for 1.1.0\n";
 
 $articleDir = __DIR__ . '/../../../article';
 $outputFile = $articleDir . '/search-list.json';

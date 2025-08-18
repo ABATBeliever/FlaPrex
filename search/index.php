@@ -67,7 +67,6 @@ foreach ($articles as $article) {
   <meta name="robots"           content="noindex, nofollow">
 
   <link rel="icon" type="image/x-icon" href="../src/media/favicon/favicon.ico">
-  <link rel="stylesheet"               href="../src/media/css/kiso.css">
   <link rel="stylesheet"               href="../src/media/css/search.css">
 </head>
 

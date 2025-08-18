@@ -17,7 +17,7 @@ echo "██          █████   ████████  ██        
 echo "██          ░████    ▓███░██  ██         ██        ░█████▒  ███  ███ \n";
 echo "FlaPrex file checker\n";
 echo "このファイルチェッカーは以下のバージョンのFlaPrex向けです: ";
-echo "Version 1.0.0";
+echo "Version 1.1.0";
 echo "\n";
 
 $errorlevel = 0;
