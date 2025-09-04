@@ -2,7 +2,7 @@
 ---
 # 💫 FlaPrex
 ![License](https://img.shields.io/badge/license-Apache-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-green.svg)
 ![Version](https://img.shields.io/badge/Language-PHP-yellow.svg)
 
 軽量で実用的、PHP製の純国産CMSソフトウェアです。
